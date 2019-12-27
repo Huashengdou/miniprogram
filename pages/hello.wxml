@@ -1,2 +1,4 @@
 <!--pages/hello.wxml-->
 <text>Hello world</text>
+
+<text>my first tag</text>
