@@ -1,4 +1,13 @@
 <!--pages/hello.wxml-->
-<text>Hello world</text>
+<!--小程序的数据绑定-->
+<view>Hello {{name}}</view>
+<view>我的同学叫{{classmatename}}</view>
 
-<text>my first tag</text>
+<!--列表展示-->
+<view wx:for="{{students}}">{{item.name}}------{{item.age}}</view>
+
+<!--事件监听-->
+<!--绑定的函数在.js文件中实现-->
+<view>当前计数：{{number}}</view>
+<button size="mini" bindtap="handleClickadd">+</button>
+<button size="mini" bindtap="handleClickdel">-</button>
