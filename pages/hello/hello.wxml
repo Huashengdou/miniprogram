@@ -11,3 +11,5 @@
 <view>当前计数：{{number}}</view>
 <button size="mini" bindtap="handleClickadd">+</button>
 <button size="mini" bindtap="handleClickdel">-</button>
+
+<view class="helloword">崔备，俺爱你！</view>

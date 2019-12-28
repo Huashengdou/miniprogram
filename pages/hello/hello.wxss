@@ -1,0 +1,6 @@
+/* pages/hello.wxss */
+.helloword{
+  font-size: 100rpx;
+  color: red;
+  font-style: italic
+}

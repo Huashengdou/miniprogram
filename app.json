@@ -1,5 +1,31 @@
 {
   "pages": [
-    "pages/hello"
-  ]
+    "pages/hello/hello",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTitleText": "大程序",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#00ffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/hello/hello",
+        "text": "text",
+        "iconPath": "images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "text",
+        "iconPath": "images/check_false.png",
+        "selectedIconPath": "images/check_true.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap33.json"
 }
