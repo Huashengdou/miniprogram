@@ -10,10 +10,10 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-    "checkSiteMap": false
+		"checkSiteMap": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.9.4",
 	"appid": "wxea48cc4e005aaca1",
 	"projectname": "hello",
 	"debugOptions": {

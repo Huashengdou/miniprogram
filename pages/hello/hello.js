@@ -23,6 +23,9 @@ Page({
       number: this.data.number -= 1
     })
     //console.log(this.data.number--)
+  },
+  handlegetinfo(event){
+    console.log(event)
   }
 
 })

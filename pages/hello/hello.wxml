@@ -4,7 +4,7 @@
 <view>我的同学叫{{classmatename}}</view>
 
 <!--列表展示-->
-<view wx:for="{{students}}">{{item.name}}------{{item.age}}</view>
+<view wx:for="{{students}}" wx:key='key'>{{item.name}}------{{item.age}}</view>
 
 <!--事件监听-->
 <!--绑定的函数在.js文件中实现-->
@@ -12,4 +12,8 @@
 <button size="mini" bindtap="handleClickadd">+</button>
 <button size="mini" bindtap="handleClickdel">-</button>
 
-<view class="helloword">崔备，俺爱你！</view>
+<button open-type="getPhoneNumber"
+        bindgetphonenumber="handlegetinfo"
+        >
+获取授权
+</button>

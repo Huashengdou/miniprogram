@@ -1,23 +1,28 @@
+//注册小程序实例
 App({
 
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
+    //网络请求
     console.log("小程序初始化完成：onLaunch")
-
+    //获取用户信息
     wx.getUserInfo({
       success:function(res){
-        console.log(res)
+        console.log("onLaunch: 获取用户数据",res)
       }
     })
+
+    let hehe = wx.getLaunchOptionsSync()
+    console.log("onLaunch:获取的场景值-->", hehe.scene)
   },
 
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-    console.log("界面显示出来")
+    console.log("界面显示出来", options)
   },
 
   /**
