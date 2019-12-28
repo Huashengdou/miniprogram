@@ -15,17 +15,21 @@
     "list": [
       {
         "pagePath": "pages/hello/hello",
-        "text": "text",
+        "text": "文章",
         "iconPath": "images/wechat.png",
         "selectedIconPath": "images/wechatHL.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "text",
+        "text": "我",
+        "color": "#0000ff",
         "iconPath": "images/check_false.png",
         "selectedIconPath": "images/check_true.png"
       }
-    ]
+    ],
+    "color": "#ff0000",
+    "selectedColor": "#00ff00",
+    "backgroundColor": "#0000ff"
   },
   "sitemapLocation": "sitemap33.json"
 }
