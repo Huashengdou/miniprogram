@@ -1,0 +1,6 @@
+<!--pages/hello.wxml-->
+<button bindtap="handleWrite"
+        >
+写笔记
+</button>
+

@@ -1,5 +1,22 @@
 {
   "pages": [
-    "pages/hello"
-  ]
+    "pages/hello/hello",
+    "pages/daily/daily",
+    "pages/index/index"
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/hello/hello",
+      "text": "日记",
+      "iconPath": "images/hello.png",
+      "selectedIconPath": "images/hello_checked.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index_checked.png"
+    }
+    ]
+  }
 }
