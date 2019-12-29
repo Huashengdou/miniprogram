@@ -83,6 +83,11 @@ Page({
         },
         success(res){
           console.log("通过云函数保存成功",res)
+          wx.showToast({
+            title: '保存成功',
+            icon: 'success',
+            duration: 2000
+          })
         },
         fail(res){
           console.log("通过云函数保存失败", res)
