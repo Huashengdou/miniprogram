@@ -5,14 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name : ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this
+    wx.getUserInfo({
+      success:function(res){
+        console.log("获取用户信息",res)
+        that.setData({
+          name : res.userInfo.nickName
+        })
+      }
+    })
   },
 
   /**

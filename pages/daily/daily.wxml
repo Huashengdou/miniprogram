@@ -1,6 +1,6 @@
 <!--pages/daily/daily.wxml-->
 <editor placeholder="请输入您当前心情..."
-        bindblur="handleEditorBlur">
+        bindinput="handleEditorBlur">
 </editor>
 
 <button bindtap="handleButtonTap">保存</button>

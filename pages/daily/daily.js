@@ -1,4 +1,7 @@
 // pages/daily/daily.js
+const db = wx.cloud.database().collection("list")
+let artical = ""
+
 Page({
 
   /**
@@ -65,11 +68,22 @@ Page({
   },
   //响应输入完成事件
   handleEditorBlur(event){
-
     console.log("input:",event)
+    artical = event.detail.text
+    console.log("artical-->",artical)
   },
+
   //响应点击保存按钮事件
   handleButtonTap(){
     console.log("点击了保存")
+    db.add({
+      data:{
+        content : artical
+      },
+      success: function(res){
+        console.log("保存成功")
+      }
+    })
+
   }
 })

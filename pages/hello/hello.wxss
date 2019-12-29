@@ -1,1 +1,6 @@
 /* pages/hello.wxss */
+.content{
+  margin: 1px 10px;
+  background: orange;
+  
+}
