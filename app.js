@@ -5,6 +5,12 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
+    
+    wx.cloud.init({
+      env: 'hello-rqbjk',
+      traceUser: true,
+    })
+    
     //网络请求
     console.log("小程序初始化完成：onLaunch")
     //获取用户信息

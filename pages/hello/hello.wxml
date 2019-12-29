@@ -17,3 +17,16 @@
         >
 获取授权
 </button>
+
+<input placeholder="请输入"></input>
+
+<editor placeholder='editor属性' 
+        bindready='handleBindready'
+        bindfocus='handlefocus'
+        bindbulr='handblur'
+        bindinput='handinput'
+></editor>
+
+<button bindtap="handleputdata">上传数据</button>
+
+<button bindtap="handlegetdata">获取数据</button>

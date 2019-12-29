@@ -4,3 +4,8 @@
   color: red;
   font-style: italic
 }
+
+input{
+  border: 1px solid red;
+  margin: 10px 30px;
+}
