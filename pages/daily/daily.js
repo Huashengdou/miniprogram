@@ -76,6 +76,20 @@ Page({
   //响应点击保存按钮事件
   handleButtonTap(){
     console.log("点击了保存")
+    wx.cloud.callFunction({
+        name : "addArticle",
+        data:{
+          content: artical
+        },
+        success(res){
+          console.log("通过云函数保存成功",res)
+        },
+        fail(res){
+          console.log("通过云函数保存失败", res)
+        }
+
+    })
+    /*通过小程序端保存数据
     db.add({
       data:{
         content : artical
@@ -83,7 +97,20 @@ Page({
       success: function(res){
         console.log("保存成功")
       }
-    })
+    })*/
 
+  },
+  //云函数加法
+  handleyunfunc(){
+    wx.cloud.callFunction({
+      name:"add",
+      data:{
+        a:2,
+        b:3
+      },
+      success:function(res){
+        console.log("调用云函数成功",res)
+      }
+    })
   }
 })
