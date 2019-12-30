@@ -1,6 +1,6 @@
 {
 	"description": "项目配置文件",
-  "cloudfunctionRoot": "/cloud",
+	"cloudfunctionRoot": "cloud/",
 	"packOptions": {
 		"ignore": []
 	},
@@ -11,7 +11,7 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-    "checkSiteMap": false
+		"checkSiteMap": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
