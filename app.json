@@ -2,7 +2,8 @@
   "pages": [
     "pages/hello/hello",
     "pages/daily/daily",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/editor/editor"
   ],
   "tabBar": {
     "list": [
