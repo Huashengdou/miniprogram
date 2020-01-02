@@ -1,10 +1,12 @@
 <!--pages/hello.wxml-->
-<view wx:for="{{artical}}" wx:key="key">
-  <view class="content">{{item.content}}</view>
-</view>
-
 <button bindtap="handleWrite"
         >
 写笔记
 </button>
+
+<view wx:for="{{artical}}" wx:key="key">
+  <view class="content">{{item.content}}</view>
+</view>
+
+
 
