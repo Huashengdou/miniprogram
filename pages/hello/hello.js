@@ -38,6 +38,12 @@
       //url: '/pages/daily/daily',
       url:'/pages/editor/editor',
     })
+  },
+  showDetail(){
+    wx.navigateTo({
+      //url: '/pages/daily/daily',
+      url: '/pages/detail/detail',
+    })
   }
 
 })

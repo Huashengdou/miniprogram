@@ -4,9 +4,21 @@
 写笔记
 </button>
 
+<!--
 <view wx:for="{{artical}}" wx:key="key">
   <view class="content">{{item.content}}</view>
 </view>
+-->
 
+<scroll-view scroll-y="true">
+  <view wx:for="{{artical}}" wx:key="key" class="item-container" bindtap="showDetail">
+    <view class="desc">
+      <view class="left">
+        <view style="font-size:32rpx;margin:10rpx 0;">{{item.content}}</view>
+        <view style="font-size:24rpx;color:darkgray">{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
 
 

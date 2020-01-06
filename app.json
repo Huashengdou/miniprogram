@@ -3,7 +3,8 @@
     "pages/hello/hello",
     "pages/daily/daily",
     "pages/index/index",
-    "pages/editor/editor"
+    "pages/editor/editor",
+    "pages/detail/detail"
   ],
   "tabBar": {
     "list": [
@@ -20,6 +21,13 @@
         "selectedIconPath": "images/index_checked.png"
       }
     ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39b5de",
+    "navigationBarTitleText": "小小笔记本",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eceff4"
   },
   "sitemapLocation": "sitemap91.json"
 }
