@@ -120,13 +120,25 @@ Page({
   },
   handleButtonTap() {
     console.log("点击了保存")
+    //获取当前时间戳
     var timestamp = Date.parse(new Date());
     timestamp = timestamp / 1000;
     console.log("当前时间戳为：" + timestamp);
     var date = new Date(timestamp * 1000);
     //console.log(date.toLocaleTimeString());
     //console.log(date.toLocaleString());
-    var tmptime = date.toLocaleString();
+    //console.log(date.toDateString());
+    //console.log(date.toGMTString());
+    //console.log(date.toISOString());
+    //console.log(date.toJSON());
+    //console.log(date.toLocaleDateString());
+    //console.log(date.toLocaleString());
+    //console.log(date.toLocaleTimeString());
+    //console.log(date.toString());
+    //console.log(date.toTimeString());
+
+    //将时间转为字符串
+    var tmptime = date.toGMTString();
     console.log("当前时间为：", tmptime);
 
     wx.cloud.callFunction({
@@ -137,17 +149,14 @@ Page({
       },
       success(res) {
         console.log("通过云函数保存成功", res)
-
-
-
         wx.showToast({
           title: '保存成功',
           icon: 'success',
           duration: 2000
-        }),
-          wx.navigateBack({
+        })
+        //wx.navigateBack({
 
-          })
+        //})
       },
       fail(res) {
         console.log("通过云函数保存失败", res)
