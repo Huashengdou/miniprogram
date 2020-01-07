@@ -120,13 +120,26 @@ Page({
   },
   handleButtonTap() {
     console.log("点击了保存")
+    var timestamp = Date.parse(new Date());
+    timestamp = timestamp / 1000;
+    console.log("当前时间戳为：" + timestamp);
+    var date = new Date(timestamp * 1000);
+    //console.log(date.toLocaleTimeString());
+    //console.log(date.toLocaleString());
+    var tmptime = date.toLocaleString();
+    console.log("当前时间为：", tmptime);
+
     wx.cloud.callFunction({
       name: "addArticle",
       data: {
-        content: artical
+        content: artical,
+        time: tmptime
       },
       success(res) {
         console.log("通过云函数保存成功", res)
+
+
+
         wx.showToast({
           title: '保存成功',
           icon: 'success',
