@@ -1,80 +1,49 @@
-const db = wx.cloud.database().collection("list")
-
-let content = ""
-
 Page({
   data:{
-    name: 'world!',
-    classmatename: 'XiaoMing',
-    students:[
-      {name:'code', age:18},
-      {name:'jam', age:19},
-      {name:'xiaoli', age:20}
-      ],
-    number:0
-    },
-    handleClickadd(){
-      //this.data.number += 1
-      this.setData(
-        {
-          number: this.data.number += 1
-        }
-      )
-      console.log("点击了按钮", this.data.number)
-    },
-  handleClickdel(){
-    this.setData({
-      number: this.data.number -= 1
-    })
-    //console.log(this.data.number--)
+    artical : []
   },
-  handlegetinfo(event){
-    console.log(event)
-  },
+  onShow:function(options){
+    var that = this
+    wx.cloud.callFunction({
+      name: "getArticle",
 
-  handleBindready(event){
-    console.log("editor 初始化完成：",event)
-  },
-  handlefocus(event) {
-    console.log("focus 初始化完成：", event)
-  }, 
-  handblur(event) {
-    console.log("blur 初始化完成：", event)
-  },
-  handinput(event) {
-    console.log("input 初始化完成：", event)
-    content = event.detail.text
-    console.log(content)
-  },
-
-  handleputdata(){
-    console.log("点击了上传数据按钮：")
-    db.add({
-      data:{
-        contents:content,
-        id:2
-      },
-      success(res){
-        console.log("添加成功",res)
-      },
-      fail(res){
-        console.log("添加失败",res)
-      }
-    })
-  },
-
-  handlegetdata() {
-    console.log("点击了获取数据按钮：")
-    db.get({
       success(res) {
-        console.log("获取成功", res)
+        console.log("通过云函数获取数据成功", res)
+        that.setData({
+          artical: res.result.data
+        })
       },
       fail(res) {
-        console.log("获取失败", res)
+        console.log("通过云函数保存失败", res)
       }
+
     })
   }
-
-
+  /*onShow:function(options){
+    var that = this
+    wx.cloud.database().collection("list").get({
+      success: function (res) {
+        // res.data 包含该记录的数据
+        console.log(res.data)
+        that.setData({
+          artical: res.data
+        })
+        //artical = res.data[0].content
+      }
+    })
+  }*/,
+  handleWrite(){
+    console.log("写笔记")
+    wx.navigateTo({
+      //url: '/pages/daily/daily',
+      url:'/pages/editor/editor',
+    })
+  },
+  showDetail(){
+    wx.navigateTo({
+      //url: '/pages/daily/daily',
+      url: '/pages/detail/detail',
+    })
+  }
 
 })

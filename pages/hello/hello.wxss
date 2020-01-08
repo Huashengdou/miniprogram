@@ -1,11 +1,26 @@
 /* pages/hello.wxss */
-.helloword{
-  font-size: 100rpx;
-  color: red;
-  font-style: italic
+.content{
+  background: rgb(94, 255, 0);
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  font-size: 30rpx;
+  line-height: 36rpx;
+  color: #666;
 }
 
-input{
-  border: 1px solid red;
-  margin: 10px 30px;
+.item-container {
+  margin: 10rpx 20rpx;
+  position: relative;
+}
+
+.desc {
+  margin: 10rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #E5E7ED;
+
 }

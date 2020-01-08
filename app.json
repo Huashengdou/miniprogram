@@ -1,35 +1,35 @@
 {
   "pages": [
     "pages/hello/hello",
-    "pages/index/index"
+    "pages/daily/daily",
+    "pages/index/index",
+    "pages/editor/editor",
+    "pages/detail/detail"
   ],
-  "window": {
-    "navigationBarBackgroundColor": "#ff0000",
-    "navigationBarTitleText": "大程序",
-    "navigationBarTextStyle": "black",
-    "backgroundColor": "#00ffff",
-    "backgroundTextStyle": "light",
-    "enablePullDownRefresh": true
-  },
+
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/hello/hello",
-        "text": "文章",
-        "iconPath": "images/wechat.png",
-        "selectedIconPath": "images/wechatHL.png"
+        "text": "日记",
+        "iconPath": "images/hello.png",
+        "selectedIconPath": "images/hello_checked.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "我",
-        "color": "#0000ff",
-        "iconPath": "images/check_false.png",
-        "selectedIconPath": "images/check_true.png"
+        "text": "我的",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_checked.png"
       }
-    ],
-    "color": "#ff0000",
-    "selectedColor": "#00ff00",
-    "backgroundColor": "#0000ff"
+    ]
   },
-  "sitemapLocation": "sitemap33.json"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39b5de",
+    "navigationBarTitleText": "小小笔记本",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eceff4"
+  },
+  "sitemapLocation": "sitemap91.json"
+
 }

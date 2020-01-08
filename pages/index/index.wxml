@@ -1,2 +1,5 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view>
+  <view>微信名：{{name}}</view>
+</view>
+
