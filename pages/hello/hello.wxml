@@ -1,4 +1,5 @@
 <!--pages/hello.wxml-->
+
 <button bindtap="handleWrite"
         >
 写笔记
@@ -20,5 +21,6 @@
     </view>
   </view>
 </scroll-view>
+
 
 

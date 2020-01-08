@@ -6,6 +6,7 @@
     "pages/editor/editor",
     "pages/detail/detail"
   ],
+
   "tabBar": {
     "list": [
       {
@@ -30,4 +31,5 @@
     "backgroundColor": "#eceff4"
   },
   "sitemapLocation": "sitemap91.json"
+
 }
