@@ -7,7 +7,10 @@ cloud.init({
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  //const wxContext = cloud.getWXContext()
-  
-  return cloud.database().collection('list').get();
+  const wxContext = cloud.getWXContext()
+  console.log(event)
+  console.log(context)
+  return await cloud.database().collection('list').where({
+    openid: wxContext.OPENID
+  }).get()
 }

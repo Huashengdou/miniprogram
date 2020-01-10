@@ -8,7 +8,8 @@ App({
     
     wx.cloud.init({
       env: "hello-rqbjk"
-    })
+    }),
+    this.globalData = {}
 
   },
 
@@ -32,4 +33,5 @@ App({
   onError: function (msg) {
 
   }
+  
 })
