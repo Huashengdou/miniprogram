@@ -22,4 +22,5 @@
   align-items: center;
   padding-bottom: 20rpx;
   border-bottom: 1px solid #E5E7ED;
+
 }

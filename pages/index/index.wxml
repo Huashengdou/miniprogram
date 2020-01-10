@@ -2,3 +2,4 @@
 <view>
   <view>微信名：{{name}}</view>
 </view>
+
