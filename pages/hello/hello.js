@@ -1,4 +1,5 @@
- Page({
+const app = getApp()
+Page({
   data:{
     artical : []
   },
@@ -6,15 +7,18 @@
     var that = this
     wx.cloud.callFunction({
       name: "getArticle",
-
+      data: {
+        //openid: app.globalData.openid
+      },
       success(res) {
         console.log("通过云函数获取数据成功", res)
         that.setData({
           artical: res.result.data
         })
+
       },
       fail(res) {
-        console.log("通过云函数保存失败", res)
+        console.log("通过云函数获取数据失败", res)
       }
 
     })
