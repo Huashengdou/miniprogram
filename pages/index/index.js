@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name : ""
-
+    name : "",
+    imagesrc: '' 
   },
 
   /**
@@ -18,7 +18,8 @@ Page({
       success:function(res){
         console.log("获取用户信息",res)
         that.setData({
-          name : res.userInfo.nickName
+          name : res.userInfo.nickName,
+          imagesrc : res.userInfo.avatarUrl
         })
       }
     })
