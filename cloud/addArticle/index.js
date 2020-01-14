@@ -9,6 +9,8 @@ cloud.init({
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   //console.log(event)
+  if(event.content == '')
+    return ;
   return cloud.database().collection('list').add({
     data:{
      content: event.content,

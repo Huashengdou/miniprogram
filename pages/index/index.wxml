@@ -1,5 +1,12 @@
 <!--pages/index/index.wxml-->
-<view>
-  <view>微信名：{{name}}</view>
+<view class="middle">
+  <van-image
+    round
+    width="8rem"
+    height="8rem"
+    src="{{imagesrc}}"
+  />
 </view>
+<view class="namemiddle">{{name}}</view>
+
 

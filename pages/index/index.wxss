@@ -1,1 +1,18 @@
 /* pages/index/index.wxss */
+.middle{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 35%;
+  position: absolute
+}
+
+.namemiddle{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 70%;
+  position: absolute
+}
