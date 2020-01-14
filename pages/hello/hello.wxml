@@ -5,6 +5,7 @@
 写笔记
 </button>
 
+<van-button type="primary">按钮</van-button>
 <!--
 <view wx:for="{{artical}}" wx:key="key">
   <view class="content">{{item.content}}</view>
