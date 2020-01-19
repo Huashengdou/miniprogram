@@ -1,2 +1,2 @@
 <!--pages/detail/detail.wxml-->
-<text>内容详情页，待填充。。。</text>
+<text>{{ detail.content }}</text>

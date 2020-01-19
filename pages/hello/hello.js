@@ -44,10 +44,11 @@ Page({
       url:'/pages/editor/editor',
     })
   },
-  showDetail(){
+  showDetail(e){
+    console.log(e)
     wx.navigateTo({
       //url: '/pages/daily/daily',
-      url: '/pages/detail/detail',
+      url: '/pages/detail/detail?content=' + JSON.stringify(e.currentTarget.dataset.content),
     })
   }
 
