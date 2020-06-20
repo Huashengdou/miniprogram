@@ -46,9 +46,17 @@ Page({
   },
   showDetail(e){
     console.log(e)
+
+    let msgId = e.currentTarget.dataset.id
+    console.log(msgId)
+    this.setData({
+      msgId: e.currentTarget.dataset.id
+    })
+    //特别注意这种传值的方式
     wx.navigateTo({
       //url: '/pages/daily/daily',
-      url: '/pages/detail/detail?content=' + JSON.stringify(e.currentTarget.dataset.content),
+      url: '/pages/detail/detail?id=' + msgId,
+
     })
   }
 

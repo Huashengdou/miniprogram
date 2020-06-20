@@ -5,16 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detail: ''
+
+    artical: [],
+    msgid: ''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      detail: JSON.parse(options.content)
-    })
+
+    //获取前一个页面传递的参数
+    this.data.msgid = options.id
+    console.log(this.data.msgid)
+
   },
 
   /**
@@ -28,6 +33,36 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this
+    wx.cloud.callFunction({
+      name: "getArticle",
+      data: {
+        //openid: app.globalData.openid
+      },
+      success(res) {
+        console.log("通过云函数获取数据成功", res)
+        that.setData({
+          artical: res.result.data
+        })
+        for (var i = 0; i < that.data.artical.length; ++i) {
+          //console.log(that.data.artical[i]._id);
+          //获取特定的msg
+          if(that.data.artical[i]._id == that.data.msgid)
+          {
+            //console.log("find it")
+            that.setData({
+              artical: that.data.artical[i]
+            })
+            // console.log(artical.)
+          }
+          else
+            continue;
+        }
+      },
+      fail(res) {
+        console.log("通过云函数获取数据失败", res)
+      }
+    })
 
   },
 
@@ -42,7 +77,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
   },
 
   /**
