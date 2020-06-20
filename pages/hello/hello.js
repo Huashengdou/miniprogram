@@ -46,6 +46,7 @@ Page({
   },
   showDetail(e){
     console.log(e)
+
     let msgId = e.currentTarget.dataset.id
     console.log(msgId)
     this.setData({
@@ -55,6 +56,7 @@ Page({
     wx.navigateTo({
       //url: '/pages/daily/daily',
       url: '/pages/detail/detail?id=' + msgId,
+
     })
   }
 

@@ -5,17 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
+
     artical: [],
     msgid: ''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     //获取前一个页面传递的参数
     this.data.msgid = options.id
     console.log(this.data.msgid)
+
   },
 
   /**
