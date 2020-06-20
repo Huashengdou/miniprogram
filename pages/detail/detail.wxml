@@ -1,2 +1,2 @@
 <!--pages/detail/detail.wxml-->
-<text>内容详情页，待填充。。。</text>
+<view style="font-size:32rpx;margin:10rpx 0;">{{artical.content}}</view>

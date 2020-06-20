@@ -101,6 +101,7 @@ Page({
   insertDate() {
     const date = new Date()
     const formatDate = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
+    
     this.editorCtx.insertText({
       text: formatDate
     })
