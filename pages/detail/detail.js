@@ -1,4 +1,5 @@
 // pages/detail/detail.js
+const app = getApp()
 Page({
 
   /**
@@ -13,9 +14,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     //获取前一个页面传递的参数
     this.data.msgid = options.id
-    console.log(this.data.msgid)
+    //获取全局变量的值
+    this.data.artical = app.globalData.artical
+
+    //console.log(this.data.msgid)
+    //console.log(this.data.artical)
   },
 
   /**
@@ -30,35 +36,20 @@ Page({
    */
   onShow: function () {
     var that = this
-    wx.cloud.callFunction({
-      name: "getArticle",
-      data: {
-        //openid: app.globalData.openid
-      },
-      success(res) {
-        console.log("通过云函数获取数据成功", res)
+    for (var i = 0; i < that.data.artical.length; ++i) {
+      //console.log(that.data.artical[i]._id);
+      //获取特定的msg
+      if (that.data.artical[i]._id == that.data.msgid)
+      {
+        //console.log("find it")
         that.setData({
-          artical: res.result.data
+          artical: that.data.artical[i]
         })
-        for (var i = 0; i < that.data.artical.length; ++i) {
-          //console.log(that.data.artical[i]._id);
-          //获取特定的msg
-          if(that.data.artical[i]._id == that.data.msgid)
-          {
-            //console.log("find it")
-            that.setData({
-              artical: that.data.artical[i]
-            })
-            // console.log(artical.)
-          }
-          else
-            continue;
-        }
-      },
-      fail(res) {
-        console.log("通过云函数获取数据失败", res)
+        // console.log(artical.)
       }
-    })
+      else
+        continue;
+    }
 
   },
 

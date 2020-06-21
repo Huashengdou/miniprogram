@@ -1,2 +1,4 @@
 <!--pages/detail/detail.wxml-->
+
 <view style="font-size:32rpx;margin:10rpx 0;">{{artical.content}}</view>
+

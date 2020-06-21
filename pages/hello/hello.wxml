@@ -12,7 +12,9 @@
 -->
 
 <scroll-view scroll-y="true">
+
   <view wx:for="{{artical}}" wx:key="key" class="item-container" bindtap="showDetail" data-id="{{item._id}}">
+
     <view class="desc">
       <view class="left">
         <view style="font-size:32rpx;margin:10rpx 0;">{{item.content}}</view>

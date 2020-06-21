@@ -1,4 +1,3 @@
-
 //注册小程序实例
 App({
   /**
@@ -9,15 +8,20 @@ App({
     wx.cloud.init({
       env: "hello-rqbjk"
     }),
-    this.globalData = {}
-
+    //全局变量初始化
+    this.globalData = {
+      id:100,
+      artical:[]
+      }
+   
   },
 
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-
+    //var that = this
+    
   },
 
   /**

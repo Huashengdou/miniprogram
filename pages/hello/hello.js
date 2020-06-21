@@ -4,8 +4,21 @@ Page({
   data:{
     artical : []
   },
+  /**
+ * 生命周期函数--监听页面加载
+ */
+  onLoad: function (options) {
+
+    //获取前一个页面传递的参数
+    //console.log(app.globalData.id)
+
+  },
   onShow:function(options){
     var that = this
+    //console.log(app.globalData.artical)
+
+    var that = this
+    
     wx.cloud.callFunction({
       name: "getArticle",
       data: {
@@ -13,6 +26,9 @@ Page({
       },
       success(res) {
         console.log("通过云函数获取数据成功", res)
+        //赋值给全局变量
+        app.globalData.artical = res.result.data
+        //console.log(app.globalData.artical)
         that.setData({
           artical: res.result.data
         })
@@ -45,12 +61,9 @@ Page({
     })
   },
   showDetail(e){
-    console.log(e)
+    //打印点击事件传来的参数
+    //console.log(e)
     let msgId = e.currentTarget.dataset.id
-    console.log(msgId)
-    this.setData({
-      msgId: e.currentTarget.dataset.id
-    })
     //特别注意这种传值的方式
     wx.navigateTo({
       //url: '/pages/daily/daily',
