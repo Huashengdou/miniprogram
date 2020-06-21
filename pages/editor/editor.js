@@ -127,9 +127,9 @@ Page({
   },
 
   handleEditorInput(event){
-    console.log("input:", event)
+    //console.log("input:", event)
     artical = event.detail.text
-    console.log("artical-->", artical)
+    //console.log("artical-->", artical)
   },
   handleButtonTap() {
     console.log("点击了保存")

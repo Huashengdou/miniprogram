@@ -19,7 +19,6 @@ Page({
     this.data.msgid = options.id
     //获取全局变量的值
     this.data.artical = app.globalData.artical
-
     //console.log(this.data.msgid)
     //console.log(this.data.artical)
   },
